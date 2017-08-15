@@ -32,9 +32,16 @@ type User struct {
 }
 
 type Result struct {
-	Source        string      `json:source`
-	ResolvedQuery string      `json:resolvedQuery`
-	Fulfillment   Fulfillment `json:fulfillment`
+	Source        string                 `json:source`
+	ResolvedQuery string                 `json:resolvedQuery`
+	Fulfillment   Fulfillment            `json:fulfillment`
+	MetaData      MetaData               `json:metadata`
+	Params        map[string]interface{} `json:"parameters"`
+}
+
+type MetaData struct {
+	IntentID   string `json:intentId`
+	IntentName string `json:intentName`
 }
 
 type Fulfillment struct {

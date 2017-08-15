@@ -58,3 +58,33 @@ func Test_1(t *testing.T) {
 	}
 	t.Errorf("OK")
 }
+
+func Test_2(t *testing.T) {
+	var r Request
+	err := json.Unmarshal(input2, &r)
+	if err != nil {
+		t.Errorf("Failed to unmarshal : %s", err)
+		return
+	}
+	// Assertion
+	result := r.Result
+	if result.MetaData.IntentID != "9457aa37-9f2a-41ce-8239-ad0d4a94f050" {
+		t.Errorf("Wrong Intent ID : %s", result.MetaData.IntentID)
+		return
+	}
+	if result.MetaData.IntentName != "Add event" {
+		t.Errorf("Wrong Intent Name : %s", result.MetaData.IntentName)
+		return
+	}
+	// Params
+	params := result.Params
+	v, ok := params["date"]
+	if !ok {
+		t.Errorf("params[\"data\"] not found : %s", params)
+		return
+	}
+	if v != "2017-08-15" {
+		t.Errorf("Wrong params[\"data\"] : %s", v)
+		return
+	}
+}

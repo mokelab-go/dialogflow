@@ -66,3 +66,94 @@ var input1 = []byte(`{
   "errorType":"success"
 },
 "sessionId":"1502731363742"}`)
+
+var input2 = []byte(`{
+"originalRequest":{
+  "source":"google",
+  "data":{
+    "surface":{
+      "capabilities":[{
+        "name":"actions.capability.AUDIO_OUTPUT"
+      }]
+    },
+    "inputs":[{
+      "arguments":[{
+        "raw_text":"Add milk on today",
+        "text_value":"Add milk on today",
+        "name":"text"
+      }],
+      "intent":"assistant.intent.action.TEXT",
+      "raw_inputs":[{
+        "query":"Add milk on today",
+        "input_type":2,
+        "annotation_sets":[]
+      }]
+    }],
+    "user":{
+      "user_id":"1502774951934",
+      "permissions":[],
+      "locale":"en-US"
+    },
+    "device":{},
+    "is_in_sandbox":true,
+    "conversation":{
+      "conversation_token":"[]",
+      "conversation_id":"1502774951934",
+      "type":2
+    }
+  }
+},
+"id":"7413ee2c-c3ae-4941-9528-86cfdc926ed9",
+"timestamp":"2017-08-15T05:29:35.058Z",
+"lang":"en",
+"result":{
+  "source":"agent",
+  "resolvedQuery":"Add milk on today",
+  "speech":"",
+  "action":"",
+  "actionIncomplete":false,
+  "parameters":{
+    "date":"2017-08-15",
+    "event":"milk"
+  },
+  "contexts":[{
+    "name":"google_assistant_input_type_voice",
+    "parameters":{
+      "date":"2017-08-15",
+      "event.original":"milk",
+      "date.original":"today",
+      "event":"milk"
+    },
+    "lifespan":0
+  },{
+    "name":"actions_capability_audio_output",
+    "parameters":{
+      "date":"2017-08-15",
+      "event.original":"milk",
+      "date.original":"today",
+      "event":"milk"
+    },
+    "lifespan":0
+  }],
+  "metadata":{
+    "intentId":"9457aa37-9f2a-41ce-8239-ad0d4a94f050",
+    "webhookUsed":"true",
+    "webhookForSlotFillingUsed":"true",
+    "nluResponseTime":98,
+    "intentName":"Add event"
+  },
+  "fulfillment":{
+    "speech":"",
+    "messages":[{
+      "type":0,
+      "speech":""
+    }]
+  },
+  "score":1.0
+},
+"status":{
+  "code":200,
+  "errorType":"success"
+},
+"sessionId":"1502774951934"
+}`)
