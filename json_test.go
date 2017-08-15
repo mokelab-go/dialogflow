@@ -1,0 +1,68 @@
+package apiai
+
+var input1 = []byte(`{
+"originalRequest":{
+  "source":"google",
+  "data":{
+    "surface":{
+      "capabilities":[
+        {"name":"actions.capability.AUDIO_OUTPUT"}
+      ]
+    },
+    "inputs":[{
+      "arguments":[],
+      "intent":"assistant.intent.action.MAIN",
+      "raw_inputs":[{
+        "query":"talk to Mokera",
+        "input_type":2,
+        "annotation_sets":[]
+      }]
+    }],
+    "user":{
+      "user_id":"1502731363742",
+      "permissions":[],
+      "locale":"en-US"
+    },
+    "device":{},
+    "is_in_sandbox":true,
+    "conversation":{
+      "conversation_id":"1502731363742",
+      "type":1
+    }
+  }
+},
+"id":"ff0f8352-772a-4af9-b1d2-db7d2c1ca8e0",
+"timestamp":"2017-08-14T17:22:43.865Z",
+"lang":"en",
+"result":{
+  "source":"agent",
+  "resolvedQuery":"GOOGLE_ASSISTANT_WELCOME",
+  "speech":"",
+  "action":"",
+  "actionIncomplete":false,
+  "parameters":{},
+  "contexts":[
+    {"name":"google_assistant_welcome","parameters":{},"lifespan":0},
+    {"name":"actions_capability_audio_output","parameters":{},"lifespan":0},
+    {"name":"google_assistant_input_type_voice","parameters":{},"lifespan":0}
+  ],
+  "metadata":{
+    "intentId":"3f8d8e18-dd37-4128-a14c-37c52ce4f560",
+    "webhookUsed":"true",
+    "webhookForSlotFillingUsed":"false",
+    "nluResponseTime":1,
+    "intentName":"Default Welcome Intent"
+  },
+  "fulfillment":{
+    "speech":"Hi!",
+    "messages":[
+      {"type":0,"speech":"Hi!"}
+    ]
+  },
+  "score":1.0
+},
+"status":{
+  "code":200,
+  "errorType":"success"
+},
+"sessionId":"1502731363742"}`)
