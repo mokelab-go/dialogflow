@@ -1,4 +1,4 @@
-package apiai
+package dialogflow
 
 import (
 	"encoding/json"

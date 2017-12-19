@@ -1,4 +1,4 @@
-package apiai
+package dialogflow
 
 var input1 = []byte(`{
 "originalRequest":{
