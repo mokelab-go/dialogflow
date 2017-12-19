@@ -1,4 +1,4 @@
-package apiai
+package dialogflow
 
 type Request struct {
 	OriginalRequest OriginalRequest `json:originalRequest`
