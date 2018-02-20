@@ -27,8 +27,9 @@ type RawInput struct {
 }
 
 type User struct {
-	ID     string `json:"user_id"`
-	Locale string `json:locale`
+	ID          string `json:"userId"`
+	Locale      string `json:locale`
+	AccessToken string `json:"accessToken"`
 }
 
 type Result struct {
