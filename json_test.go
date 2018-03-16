@@ -19,7 +19,8 @@ var input1 = []byte(`{
       }]
     }],
     "user":{
-      "user_id":"1502731363742",
+      "accessToken":"a75c98e4dbc6f53856ab527f24a62237e7",
+      "userId":"1502731363742",
       "permissions":[],
       "locale":"en-US"
     },
@@ -90,7 +91,8 @@ var input2 = []byte(`{
       }]
     }],
     "user":{
-      "user_id":"1502774951934",
+      "userId":"1502774951934",
+      "accessToken":"a75c98e43aba71dbc6f53b527f24a62237e7",
       "permissions":[],
       "locale":"en-US"
     },

@@ -19,6 +19,10 @@ func Test_1(t *testing.T) {
 		t.Errorf("Wrong User ID : %s", originalRequest.Data.User.ID)
 		return
 	}
+	if originalRequest.Data.User.AccessToken != "a75c98e4dbc6f53856ab527f24a62237e7" {
+		t.Errorf("Wrong User AccessToken : %s", originalRequest.Data.User.AccessToken)
+		return
+	}
 	if originalRequest.Data.User.Locale != "en-US" {
 		t.Errorf("Wrong User Locale : %s", originalRequest.Data.User.Locale)
 		return
@@ -56,7 +60,6 @@ func Test_1(t *testing.T) {
 		t.Errorf("Wrong Speech : %s", msg.Speech)
 		return
 	}
-	t.Errorf("OK")
 }
 
 func Test_2(t *testing.T) {
